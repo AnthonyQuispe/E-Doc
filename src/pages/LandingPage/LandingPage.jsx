@@ -5,7 +5,7 @@ import logo from "../../assets/images/E-Doc.svg";
 import navMenu from "../../assets/icons/menu.png";
 import searchIcon from "../../assets/icons/search.png";
 import doctorIcon from "../../assets/icons/UserIcon.png";
-import eDocIcon from "../../assets/images/eDoc.png";
+import eDocIcon from "../../assets/images/Doctor.png";
 import CovidIcon from "../../assets/icons/CovidIcon.svg";
 import MentalHealthIcon from "../../assets/icons/MenthHealthIcon.svg";
 import LungIcon from "../../assets/icons/LungIcon.svg";
@@ -19,7 +19,7 @@ import ProfilePic4 from "../../assets/images/ProfilePic4.png";
 import ProfilePic5 from "../../assets/images/ProfilePic5.png";
 import ProfilePic6 from "../../assets/images/ProfilePic6.png";
 import StarIcons from "../../assets/images/Stars.svg";
-import Doctor from "../../assets/images/Doctor.png";
+import Doctor from "../../assets/images/Doc.png";
 import RightArrow from "../../assets/icons/RightArrow.svg";
 import Facebook from "../../assets/icons/Facebook.svg";
 import Instagram from "../../assets/icons/Instagram.svg";
@@ -120,14 +120,16 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-        <ul className="hero__services">
-          {servicesArray.map((service) => (
-            <li className="hero__services-list">
-              <h3 className="hero__services-service">{service.service}</h3>
-              <p className="hero__services-info">{service.info}</p>
-            </li>
-          ))}
-        </ul>
+        <div className="hero__services-container">
+          <ul className="hero__services">
+            {servicesArray.map((service) => (
+              <li className="hero__services-list">
+                <h3 className="hero__services-service">{service.service}</h3>
+                <p className="hero__services-info">{service.info}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
       <section className="choose-us">
         <div className="choose-us-container">
@@ -404,7 +406,9 @@ export default function LandingPage() {
           </div>
           <div class="footer__address">
             <h4 class="footer__title">Address</h4>
-            <img class="footer__address-image" src={Map} alt="Map" />
+            <a href="https://www.google.com/maps">
+              <img class="footer__address-image" src={Map} alt="Map" />
+            </a>
           </div>
         </div>
         <hr class="footer__divider" />
