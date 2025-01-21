@@ -27,6 +27,8 @@ import Twitter from "../../assets/icons/Twitter.svg";
 import Map from "../../assets/images/Map.png";
 
 export default function LandingPage() {
+  const [success, setSuccess] = useState(false);
+
   const linksArray = [
     { text: "Home", link: "/" },
     { text: "About", link: "/about" },
@@ -55,6 +57,11 @@ export default function LandingPage() {
     { service: "100+", info: "Doctors" },
     { service: "1M+", info: "Active Patients" },
   ];
+
+  function NewsletterSubmitHandle() {
+    event.preventDefault();
+    setSuccess(true);
+  }
 
   return (
     <div className="landing-page">
@@ -327,19 +334,28 @@ export default function LandingPage() {
         </div>
       </section>
       <section className="newsletter">
-        <div className="newsletter__container">
-          <h3 className="newsletter__title"> Subscribe To Our Newsletter</h3>
-          <div className="newsletter__container-search">
-            <input className="newsletter__input" />
-            <button className="newsletter__button">
-              <img
-                className="newsletter__img"
-                src={RightArrow}
-                alt="Right arrow Icon"
-              />
-            </button>
+        {!success ? (
+          <div className="newsletter__container">
+            <h3 className="newsletter__title"> Subscribe To Our Newsletter</h3>
+            <form
+              className="newsletter__container-search"
+              onSubmit={NewsletterSubmitHandle}
+            >
+              <input className="newsletter__input" />
+              <button className="newsletter__button" type="submit">
+                <img
+                  className="newsletter__img"
+                  src={RightArrow}
+                  alt="Right arrow Icon"
+                />
+              </button>
+            </form>
           </div>
-        </div>
+        ) : (
+          <div className="newsletter__container">
+            <h3 className="newsletter__title"> Successfully Subscribed</h3>
+          </div>
+        )}
       </section>
       <footer class="footer">
         <div class="footer__top-container">
@@ -386,7 +402,6 @@ export default function LandingPage() {
               </li>
             </ul>
           </div>
-
           <div class="footer__links">
             <h4 class="footer__title">Useful Links</h4>
             <ul class="footer__link-list">

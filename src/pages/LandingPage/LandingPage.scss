@@ -64,6 +64,16 @@
     }
   }
 
+  &__button:hover {
+    background-color: $Blue;
+    color: white;
+  }
+
+  &__button--blue:hover {
+    background-color: transparent;
+    color: $Blue;
+  }
+
   &__menu {
     background-color: transparent;
     border: none;
