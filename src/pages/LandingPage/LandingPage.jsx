@@ -25,9 +25,11 @@ import Facebook from "../../assets/icons/Facebook.svg";
 import Instagram from "../../assets/icons/Instagram.svg";
 import Twitter from "../../assets/icons/Twitter.svg";
 import Map from "../../assets/images/Map.png";
+import MobileNav from "../../components/MobileNav/MobileNav";
 
 export default function LandingPage() {
   const [success, setSuccess] = useState(false);
+  const [mobileNav, openMobileNav] = useState(false);
 
   const linksArray = [
     { text: "Home", link: "/" },
@@ -63,6 +65,10 @@ export default function LandingPage() {
     setSuccess(true);
   }
 
+  const onClickMobile = () => {
+    openMobileNav(!mobileNav);
+  };
+
   return (
     <div className="landing-page">
       <nav className="nav">
@@ -70,8 +76,8 @@ export default function LandingPage() {
           <img src={logo} alt="Logo" className="nav__logo" />
         </Link>
         <ul className="nav__list">
-          {linksArray.map((navLink) => (
-            <Link to={navLink.link} className="nav__link">
+          {linksArray.map((navLink, index) => (
+            <Link to={navLink.link} className="nav__link" key={index}>
               <li className="nav__list">{navLink.text}</li>
             </Link>
           ))}
@@ -80,10 +86,12 @@ export default function LandingPage() {
           <button className="nav__button">Log in</button>
           <button className="nav__button nav__button--blue">Sign Up</button>
         </div>
-        <button className="nav__menu">
+        <button className="nav__menu" onClick={onClickMobile}>
           <img src={navMenu} className="nav__menu-img" />
         </button>
       </nav>
+      {mobileNav && <MobileNav onClickMobile={onClickMobile} />}
+
       <section className="hero">
         <div className="hero__container">
           <div className="hero__container-left">
@@ -92,7 +100,6 @@ export default function LandingPage() {
                 Find & Search Your
                 <span className="hero__title--blue-text"> Favorite</span> Doctor
               </h1>
-
               <p className="hero__description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing <br /> elit.
                 Sem velit viverra amet faucibus.
@@ -102,15 +109,15 @@ export default function LandingPage() {
               <div className="hero__search-left-container">
                 <img src={doctorIcon} className="hero__search-img" />
                 <select className="hero__search-select">
-                  {doctorArray.map((doctor) => (
-                    <option className="hero__search-option">
+                  {doctorArray.map((doctor, index) => (
+                    <option className="hero__search-option" key={index}>
                       {doctor.name}
                     </option>
                   ))}
                 </select>
                 <select className="hero__search-select hero__search-select--offices ">
-                  {officesArray.map((office) => (
-                    <option className="hero__search-option">
+                  {officesArray.map((office, index) => (
+                    <option className="hero__search-option" key={index}>
                       {office.name}
                     </option>
                   ))}
@@ -129,8 +136,8 @@ export default function LandingPage() {
         </div>
         <div className="hero__services-container">
           <ul className="hero__services">
-            {servicesArray.map((service) => (
-              <li className="hero__services-list">
+            {servicesArray.map((service, index) => (
+              <li className="hero__services-list" key={index}>
                 <h3 className="hero__services-service">{service.service}</h3>
                 <p className="hero__services-info">{service.info}</p>
               </li>
@@ -357,77 +364,80 @@ export default function LandingPage() {
           </div>
         )}
       </section>
-      <footer class="footer">
-        <div class="footer__top-container">
-          <div class="footer__brand">
-            <h4 class="footer__title">E-Doc</h4>
-            <p class="footer__description">
+      <footer className="footer">
+        <div className="footer__top-container">
+          <div className="footer__brand">
+            <h4 className="footer__title">E-Doc</h4>
+            <p className="footer__description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec risus
               feugiat lectus risus sed ullamcorper. Auctor semper fermentum
             </p>
-            <p class="footer__description">
+            <p className="footer__description">
               volutpat integer vel. In rhoncus elementum nunc, malesuada mi sed.
               Nibh est sit lobortis id semper.
             </p>
-            <ul class="footer__social-links">
-              <li class="footer__social-item">
-                <a href="https://www.facebook.com/" class="footer__social-link">
+            <ul className="footer__social-links">
+              <li className="footer__social-item">
+                <a
+                  href="https://www.facebook.com/"
+                  className="footer__social-link"
+                >
                   <img
                     src={Facebook}
                     alt="facebook"
-                    class="footer__social-icon"
+                    className="footer__social-icon"
                   />
                 </a>
               </li>
-              <li class="footer__social-item">
+              <li className="footer__social-item">
                 <a
                   href="https://www.instagram.com/"
-                  class="footer__social-link"
+                  className="footer__social-link"
                 >
                   <img
                     src={Instagram}
                     alt="instagram"
-                    class="footer__social-icon"
+                    className="footer__social-icon"
                   />
                 </a>
               </li>
-              <li class="footer__social-item">
-                <a href="https://x.com/" class="footer__social-link">
+              <li className="footer__social-item">
+                <a href="https://x.com/" className="footer__social-link">
                   <img
                     src={Twitter}
                     alt="twitter"
-                    class="footer__social-icon"
+                    className="footer__social-icon"
                   />
                 </a>
               </li>
             </ul>
           </div>
-          <div class="footer__links">
-            <h4 class="footer__title">Useful Links</h4>
-            <ul class="footer__link-list">
-              <li class="footer__link-item">
-                <Link class="footer__link">About Us</Link>
+          <div className="footer__links">
+            <h4 className="footer__title">Useful Links</h4>
+            <ul className="footer__link-list">
+              <li className="footer__link-item">
+                <Link className="footer__link">About Us</Link>
               </li>
-              <li class="footer__link-item">
-                <Link class="footer__link">Privacy Policy</Link>
+              <li className="footer__link-item">
+                <Link className="footer__link">Privacy Policy</Link>
               </li>
-              <li class="footer__link-item">
-                <Link class="footer__link">Our Mission</Link>
+              <li className="footer__link-item">
+                <Link className="footer__link">Our Mission</Link>
               </li>
-              <li class="footer__link-item">
-                <Link class="footer__link">Our Team</Link>
+              <li className="footer__link-item">
+                <Link className="footer__link">Our Team</Link>
               </li>
             </ul>
           </div>
-          <div class="footer__address">
-            <h4 class="footer__title">Address</h4>
+          <div className="footer__address">
+            <h4 className="footer__title">Address</h4>
             <a href="https://www.google.com/maps">
-              <img class="footer__address-image" src={Map} alt="Map" />
+              <img className="footer__address-image" src={Map} alt="Map" />
             </a>
           </div>
         </div>
-        <hr class="footer__divider" />
-        <p class="footer__copyright">© 2025 All Right Reserved</p>
+        <hr className="footer__divider" />
+        <p className="footer__copyright">© 2025 All Right Reserved</p>
       </footer>
     </div>
   );
