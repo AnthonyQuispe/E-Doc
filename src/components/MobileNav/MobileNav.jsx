@@ -6,9 +6,9 @@ import "./MobileNav.scss";
 export default function MobileNav({ onClickMobile }) {
   const linksArray = [
     { text: "Home", link: "/" },
-    { text: "About", link: "/about" },
-    { text: "Application", link: "/application" },
-    { text: "History", link: "/history" },
+    { text: "About", link: "/" },
+    { text: "Application", link: "/" },
+    { text: "History", link: "/" },
   ];
 
   return (

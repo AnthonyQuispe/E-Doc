@@ -33,9 +33,9 @@ export default function LandingPage() {
 
   const linksArray = [
     { text: "Home", link: "/" },
-    { text: "About", link: "/about" },
-    { text: "Application", link: "/application" },
-    { text: "History", link: "/history" },
+    { text: "About", link: "/" },
+    { text: "Application", link: "/" },
+    { text: "History", link: "/" },
   ];
 
   const doctorArray = [
@@ -348,7 +348,7 @@ export default function LandingPage() {
               className="newsletter__container-search"
               onSubmit={NewsletterSubmitHandle}
             >
-              <input className="newsletter__input" />
+              <input className="newsletter__input" placeholder="Email" />
               <button className="newsletter__button" type="submit">
                 <img
                   className="newsletter__img"
