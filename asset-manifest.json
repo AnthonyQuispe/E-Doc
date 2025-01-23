@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/E-Doc/static/css/main.9f54a2d0.css",
+    "main.js": "/E-Doc/static/js/main.68cb4a4a.js",
+    "static/media/Doc.png": "/E-Doc/static/media/Doc.5f55b14e905792d27bcd.png",
+    "static/media/SourceSans3-Regular.ttf": "/E-Doc/static/media/SourceSans3-Regular.d5f259bc2699f6304f9a.ttf",
+    "static/media/SourceSans3-Bold.ttf": "/E-Doc/static/media/SourceSans3-Bold.82c3c9bec7b83d9d5846.ttf",
+    "static/media/Doctor.png": "/E-Doc/static/media/Doctor.1e51792d81070d36e915.png",
+    "static/media/WhyChooseUsPicture.png": "/E-Doc/static/media/WhyChooseUsPicture.7575094f2047a3a648f6.png",
+    "static/media/Map.png": "/E-Doc/static/media/Map.65594bcc3914fe13b549.png",
+    "static/media/UserIcon.png": "/E-Doc/static/media/UserIcon.4f5be819843f8b287262.png",
+    "static/media/search.png": "/E-Doc/static/media/search.d3f3f81c6288e9f53555.png",
+    "static/media/LungIcon.svg": "/E-Doc/static/media/LungIcon.aff6c8e168e4fed5bc6e49aba7cd8376.svg",
+    "static/media/Stars.svg": "/E-Doc/static/media/Stars.6c82767c7831bc740c5e429ba160cb11.svg",
+    "static/media/E-Doc.svg": "/E-Doc/static/media/E-Doc.81a43d13e1216b37e6f1680dab713381.svg",
+    "static/media/CovidIcon.svg": "/E-Doc/static/media/CovidIcon.1da22831d44f20acc2b4816eeeb6bbe6.svg",
+    "static/media/SupplimentIcon.svg": "/E-Doc/static/media/SupplimentIcon.42c94625f8b7f43b9a356be506130f27.svg",
+    "static/media/Instagram.svg": "/E-Doc/static/media/Instagram.67e4b320079704165852a3f60ca6398f.svg",
+    "static/media/MenthHealthIcon.svg": "/E-Doc/static/media/MenthHealthIcon.d0173c660baa9db432e7c23d69a15071.svg",
+    "static/media/Twitter.svg": "/E-Doc/static/media/Twitter.e6114f6c81fe488012bc628e48861204.svg",
+    "static/media/Facebook.svg": "/E-Doc/static/media/Facebook.4e3c2f2954cd7bad6fb69f216677a649.svg",
+    "index.html": "/E-Doc/index.html",
+    "static/media/CheckmarkIcon.svg": "/E-Doc/static/media/CheckmarkIcon.a2c9fa98ad1a373d795a5eabd4c4e2d8.svg",
+    "static/media/RightArrow.svg": "/E-Doc/static/media/RightArrow.12e7280c5818d63dbeb69045da9e955c.svg",
+    "main.9f54a2d0.css.map": "/E-Doc/static/css/main.9f54a2d0.css.map",
+    "main.68cb4a4a.js.map": "/E-Doc/static/js/main.68cb4a4a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f54a2d0.css",
+    "static/js/main.68cb4a4a.js"
+  ]
+}
